@@ -76,3 +76,23 @@ Jawaban dan indeks soal disimpan dalam `QuizProvider`, sehingga tetap tersedia s
 ## 10. GitHub dan Pengumpulan
 
 Repository harus berada di akun GitHub mahasiswa sendiri. Lakukan commit bertahap setiap fitur selesai; jangan hanya mengunggah seluruh proyek sekali di akhir. Setelah README, screenshot, mockup, dan tautan video dilengkapi, push perubahan terakhir dan kumpulkan **link repository GitHub** melalui Google Classroom sebelum deadline.
+
+## App Screenshots
+
+### 1. Splash Screen
+![Quizora Splash Screen](assets/images/screenshots/splash.jpeg)
+
+### 2. Biodata Screen
+![Quizora Biodata Screen](assets/images/screenshots/biodata.jpeg)
+
+### 3. Home Screen
+![Quizora Home Screen](assets/images/screenshots/home.jpeg)
+
+### 4. Quiz Screen
+![Quizora Quiz Screen](assets/images/screenshots/quiz.jpeg)
+
+### 5. Result Screen
+![Quizora Result Screen](assets/images/screenshots/result.jpeg)
+
+## UI/UX Mockup
+[View Quizora Mockup on Figma](https://www.figma.com/design/pt18VggVMyRKxBqatzXrPp/Untitled?node-id=0-1&t=CK50vqOdQGYInnQI-1)
