@@ -1,0 +1,1 @@
+Custom font files bundled in this folder contain Lato font data. The pubspec and app theme refer to this family as `Lato`. Before final submission, verify the original source and include the applicable font license/attribution in the repository. Do not label these files as Nunito unless replaced with actual Nunito font files.

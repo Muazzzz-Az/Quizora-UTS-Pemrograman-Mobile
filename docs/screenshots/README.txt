@@ -1,0 +1,1 @@
+Tambahkan screenshot ASLI dari setiap halaman aplikasi yang sudah dijalankan: splash.png, biodata.png, home.png, quiz.png, result.png. Jangan menggunakan mock screenshot sebagai bukti aplikasi berjalan.
