@@ -1,25 +1,25 @@
 # Quizora — Aplikasi Kuis Pilihan Ganda
 
-Aplikasi Flutter untuk UTS Pemrograman Mobile. Alur aplikasi: **Splash Screen → Biodata → Home → Quiz → Result**. Pertanyaan disimpan secara lokal; tidak menggunakan database.
+Quizora adalah aplikasi Flutter untuk UTS Pemrograman Mobile. Alur aplikasi meliputi Splash Screen → Biodata → Home → Quiz → Result. Pertanyaan disimpan secara lokal tanpa menggunakan database.
 
-## 1. Identitas Mahasiswa — wajib dilengkapi
+## 1. Identitas Mahasiswa
 
-- **Nama:** [ISI NAMA LENGKAP]
-- **NIM:** [ISI NIM]
-- **Lab:** [ISI PM 1 ATAU PM 3]
+- **Nama:** Muaz Alfattah Fadhani
+- **NIM:** 241401053
+- **Lab:** PM 3
 
 ## 2. Informasi Aplikasi
 
 - **Nama aplikasi:** Quizora
-- **Deskripsi:** Aplikasi kuis pilihan ganda dengan profil peserta, progres pertanyaan, perhitungan skor, dan ulasan jawaban.
+- **Deskripsi:** Aplikasi kuis pilihan ganda dengan profil peserta, progres pertanyaan, perhitungan skor, serta ulasan jawaban.
 - **Fitur:**
   - Splash screen pembuka.
-  - Form biodata: nama wajib, NIM dan program studi opsional.
+  - Form biodata dengan nama wajib diisi, sedangkan NIM dan program studi bersifat opsional.
   - Home dengan sapaan personal dan tombol mulai kuis.
   - 10 pertanyaan pilihan ganda tentang Flutter, Dart, dan Git.
-  - Navigasi soal sebelumnya/berikutnya dan indikator progres.
-  - Validasi agar soal harus dijawab sebelum lanjut.
-  - Hasil berupa skor, jumlah benar/salah, serta review dan pembahasan.
+  - Navigasi soal sebelumnya dan berikutnya serta indikator progres.
+  - Validasi agar soal dijawab sebelum melanjutkan.
+  - Hasil berupa skor, jumlah jawaban benar dan salah, serta review dan pembahasan.
   - State kuis dikelola dengan Provider selama sesi berlangsung.
   - Tema terang dan gelap.
   - Layout responsif dengan batas lebar konten untuk layar lebih lebar.
@@ -33,66 +33,61 @@ Aplikasi Flutter untuk UTS Pemrograman Mobile. Alur aplikasi: **Splash Screen �
 
 ## 4. Cara Menjalankan
 
-Buka folder proyek ini di VS Code. Jika folder belum memiliki konfigurasi platform Android/Web, jalankan sekali:
+Buka folder proyek melalui terminal dan jalankan:
 
 ```powershell
-flutter create .
 flutter pub get
+flutter devices
 flutter run
 ```
 
-Untuk menjalankan pada perangkat Android yang sudah terdeteksi, gunakan `flutter devices` untuk melihat ID perangkat, lalu `flutter run -d ID_PERANGKAT`.
+Jika konfigurasi platform Android atau Web belum tersedia, jalankan `flutter create .` satu kali dari direktori proyek sebelum menjalankan aplikasi.
 
-## 5. Dokumentasi Screenshot — wajib dilengkapi dengan screenshot asli
+Untuk menjalankan aplikasi pada perangkat tertentu, gunakan `flutter run -d ID_PERANGKAT` sesuai ID yang ditampilkan oleh `flutter devices`.
 
-Simpan screenshot dari aplikasi yang benar-benar berjalan ke `docs/screenshots/`, lalu centang dan pastikan file tersedia sebelum push ke GitHub.
+## 5. Dokumentasi Screenshot
 
-- [ ] Splash Screen — `docs/screenshots/splash.png`
-- [ ] Biodata — `docs/screenshots/biodata.png`
-- [ ] Home — `docs/screenshots/home.png`
-- [ ] Quiz — `docs/screenshots/quiz.png`
-- [ ] Result — `docs/screenshots/result.png`
+Screenshot antarmuka Quizora disimpan dalam folder `assets/images/screenshots/`.
 
-## 6. Mockup / Prototype — wajib diisi
+### Splash Screen
+![Quizora Splash Screen](assets/images/screenshots/splash.jpeg)
 
-Link Figma atau prototype: **[TEMPELKAN LINK MOCKUP/PROTOTYPE]**
+### Biodata Screen
+![Quizora Biodata Screen](assets/images/screenshots/biodata.jpeg)
 
-## 7. Video Presentasi — wajib diisi
+### Home Screen
+![Quizora Home Screen](assets/images/screenshots/home.jpeg)
 
-Link video Google Drive (durasi maksimal 10 menit): **[TEMPELKAN LINK VIDEO]**
+### Quiz Screen
+![Quizora Quiz Screen](assets/images/screenshots/quiz.jpeg)
 
-Pastikan izin akses Google Drive memungkinkan dosen/asisten membuka video.
+### Result Screen
+![Quizora Result Screen](assets/images/screenshots/result.jpeg)
+
+## 6. UI/UX Mockup
+
+Mockup antarmuka Quizora dibuat menggunakan Figma.
+
+[View Quizora UI/UX Mockup on Figma](https://www.figma.com/design/pt18VggVMyRKxBqatzXrPp/Untitled?node-id=0-1&t=CK50vqOdQGYInnQI-1)
+
+## 7. Video Presentasi
+
+- **Link video Google Drive:** [TEMPELKAN LINK VIDEO]
+
+Video presentasi berdurasi maksimal 10 menit. Pastikan izin akses Google Drive memungkinkan dosen dan asisten laboratorium membuka video.
 
 ## 8. Kredit Aset
 
-- **Font Lato:** font kustom yang disertakan di `assets/fonts/`. Cantumkan sumber unduhan resmi dan lisensi font yang digunakan saat finalisasi repository.
+- **Font:** Lato, disertakan dalam folder `assets/fonts/`. Sumber dan lisensi font perlu dicantumkan setelah diverifikasi.
 - **Ikon:** Material Icons yang disediakan oleh Flutter SDK.
-- **Gambar eksternal:** tidak ada gambar eksternal yang digunakan dalam versi ini.
+- **Gambar eksternal:** Tidak dicantumkan sebagai aset eksternal dalam dokumentasi ini.
 
-## 9. Catatan State Management
+## 9. State Management
 
-Jawaban dan indeks soal disimpan dalam `QuizProvider`, sehingga tetap tersedia saat berpindah halaman dan saat widget dibangun ulang selama sesi aplikasi masih berjalan. Uji rotasi perangkat sebelum pengumpulan untuk memastikan progres benar-benar tidak hilang pada perangkat target.
+Jawaban dan indeks soal dikelola melalui `QuizProvider` selama sesi aplikasi berlangsung. State digunakan untuk mempertahankan progres kuis ketika pengguna berpindah halaman. Perilaku saat rotasi perangkat perlu diuji untuk memastikan progres tetap terjaga pada perangkat target.
 
 ## 10. GitHub dan Pengumpulan
 
-Repository harus berada di akun GitHub mahasiswa sendiri. Lakukan commit bertahap setiap fitur selesai; jangan hanya mengunggah seluruh proyek sekali di akhir. Setelah README, screenshot, mockup, dan tautan video dilengkapi, push perubahan terakhir dan kumpulkan **link repository GitHub** melalui Google Classroom sebelum deadline.
+Repository GitHub digunakan untuk menyimpan kode sumber dan perkembangan pengerjaan melalui commit bertahap.
 
-## App Screenshots
-
-### 1. Splash Screen
-![Quizora Splash Screen](assets/images/screenshots/splash.jpeg)
-
-### 2. Biodata Screen
-![Quizora Biodata Screen](assets/images/screenshots/biodata.jpeg)
-
-### 3. Home Screen
-![Quizora Home Screen](assets/images/screenshots/home.jpeg)
-
-### 4. Quiz Screen
-![Quizora Quiz Screen](assets/images/screenshots/quiz.jpeg)
-
-### 5. Result Screen
-![Quizora Result Screen](assets/images/screenshots/result.jpeg)
-
-## UI/UX Mockup
-[View Quizora Mockup on Figma](https://www.figma.com/design/pt18VggVMyRKxBqatzXrPp/Untitled?node-id=0-1&t=CK50vqOdQGYInnQI-1)
+Sebelum pengumpulan, pastikan identitas mahasiswa sudah lengkap, seluruh fitur telah diuji, mockup dapat diakses, dan video presentasi sudah tersedia. Setelah semua persyaratan dipenuhi, push perubahan terakhir ke GitHub dan kumpulkan tautan repository melalui Google Classroom.
