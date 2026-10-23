@@ -72,7 +72,7 @@ Mockup antarmuka Quizora dibuat menggunakan Figma.
 
 ## 7. Video Presentasi
 
-- **Link video Google Drive:** [TEMPELKAN LINK VIDEO]
+- **Link video Google Drive:** (https://drive.google.com/file/d/1t-UOIe0QlGQ_Osrr_Wi8RTdWbwd4o8Ip/view?usp=drivesdk)
 
 Video presentasi berdurasi maksimal 10 menit. Pastikan izin akses Google Drive memungkinkan dosen dan asisten laboratorium membuka video.
 
